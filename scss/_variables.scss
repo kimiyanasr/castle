@@ -1,0 +1,16 @@
+// Variables
+$width-website:1280px;
+$main-color:#cccc;
+$dark-color:#333;
+$medium-color:grey;
+$bg-imge:url('../img/showcase.jpg');
+$bg-section:url('../img/ticket.jpg');
+// Set Text Color
+@function set-text-color($color) {
+    @if (lightness($color)>50) {
+        @return #fff;
+    }
+    @else {
+        @return #000;
+    }
+}

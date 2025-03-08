@@ -1,0 +1,60 @@
+.container {
+    max-width: $width-website;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+// Bottom
+%btn-shared {
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    &-gray {
+        @extend %btn-shared;
+        color: #fff;
+        background-color: $medium-color;
+        &:hover {
+            background-color: rgb(59, 59, 59);
+            border: 0.5px $dark-color solid;
+        }
+    }
+    &-light {
+        @extend %btn-shared;
+        color: #fff;
+        background-color: $main-color;
+        border-radius: 5px;
+        &:hover {
+            background-color: #fff;
+            color: $dark-color;
+            border: none;
+            text-transform: uppercase;
+        }
+    }
+    &-dark {
+        @extend %btn-shared;
+        color: #fff;
+        background-color: $dark-color;
+        &:hover {
+            background-color: $medium-color;
+            color: #333;
+            font-size: larger;
+            box-shadow: 2px 2px 5px 3px $dark-color;
+        }
+    }
+    &-white {
+        @extend %btn-shared;
+        color: #333;
+        background-color: #fff;
+        border-radius: 5px;
+        text-align: center;
+        &:hover {
+            background-color: rgb(219, 219, 219);
+        }
+    }
+}
